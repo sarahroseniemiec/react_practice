@@ -9768,8 +9768,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 
-console.log('hello');
-__WEBPACK_IMPORTED_MODULE_1_react_dom___default.a.render(__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__components_App__["a" /* App */], null), document.getElementById('app'));
+document.addEventListener('DOMContentLoaded', function () {
+  console.log('hello');
+  __WEBPACK_IMPORTED_MODULE_1_react_dom___default.a.render(__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__components_App__["a" /* App */], null), document.getElementById('app'));
+});
 
 /***/ }),
 /* 84 */
@@ -22399,12 +22401,27 @@ module.exports = ReactDOMInvalidARIAHook;
 
 
 
+class Clock extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
+  render() {
+    return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      'h2',
+      null,
+      'It is oclock.'
+    );
+  }
+}
+
 class App extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
   render() {
     return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-      'h1',
+      'div',
       null,
-      'Hello World'
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'h1',
+        null,
+        'Hello World'
+      ),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Clock, null)
     );
   }
 
